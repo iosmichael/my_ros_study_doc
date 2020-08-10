@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  master:
+    image: iosmichael/ros2:1.1
+    volumes:
+      - /tmp/.X11-unix/:/tmp/.X11-unix/:rw
+      - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
+    cap_add:
+      - SYS_PTRACE
+    environment:
+      - DISPLAY=$DISPLAY
+      - XAUTHORITY=/tmp/.docker.xauth
+    devices:
+      - /dev/dri 
+    network_mode: "host"
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined

@@ -1,0 +1,18 @@
+{
+	// "dockerFile": "Dockerfile",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "master",
+  "workspaceFolder":"/workspaces",
+  "shutdownAction": "stopCompose",
+	"forwardPorts": [3000],
+    "extensions": [
+		"ms-vscode.cmake-tools",
+		"ms-vscode.cpptools",
+		"hars.cppsnippets",
+		"austin.code-gnu-global",
+		"ms-python.python",
+		"deitry.colcon-helper",
+		"ms-iot.vscode-ros",
+		"zoneorz.ros-package-variable"
+	]
+}
